@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Familie Streck</title>
+  <meta name="description" content="Private Domain der Familie Streck.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 96'%3E%3Cpath d='M40 3 L75 13 V45 C75 67 60 83 40 93 C20 83 5 67 5 45 V13 Z' fill='%231d1714' stroke='%23c9a27e' stroke-width='4'/%3E%3Cpath d='M40 20 V78' stroke='%23c9a27e' stroke-width='3'/%3E%3Cpath d='M29 28 H51' stroke='%23c9a27e' stroke-width='3'/%3E%3Ctext x='40' y='66' text-anchor='middle' font-family='Georgia,serif' font-size='52' fill='%23e6c9a8' stroke='%231d1714' stroke-width='6' paint-order='stroke fill'%3ES%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #17120f;
+      --bg-2: #241b16;
+      --text: #f1e6da;
+      --muted: #b8a594;
+      --accent: #c9a27e;
+      --accent-2: #e6c9a8;
+      --line: rgba(201, 162, 126, 0.28);
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6efe6;
+        --bg-2: #ecdfcf;
+        --text: #2b211b;
+        --muted: #7a6656;
+        --accent: #9a6d45;
+        --accent-2: #7b5434;
+        --line: rgba(154, 109, 69, 0.3);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 38%, var(--bg-2) 0%, transparent 70%),
+        var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      text-transform: uppercase;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* feine Körnung für eine edlere, papierartige Anmutung */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    main {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+      animation: rise 1.2s cubic-bezier(.2,.7,.2,1) both;
+    }
+
+    .crest {
+      display: block;
+      width: 84px;
+      height: auto;
+      margin: 0 auto 34px;
+      overflow: visible;
+    }
+    .crest .outer { fill: none; stroke: var(--accent); stroke-width: 1.2; }
+    .crest .inner { fill: none; stroke: var(--line); stroke-width: 1; }
+    .crest .sword { fill: none; stroke: var(--accent); stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+    .crest .pommel { fill: var(--accent); }
+    .crest text {
+      font-family: var(--serif);
+      font-size: 50px;
+      fill: var(--accent-2);
+      /* ausgesparter Rand: das S liegt sichtbar "über" der Klinge */
+      stroke: var(--bg-2);
+      stroke-width: 5px;
+      paint-order: stroke fill;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.32em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(44px, 12vw, 84px);
+      line-height: 1;
+      letter-spacing: 0.12em;
+      margin-right: -0.12em; /* gleicht den Zeichenabstand am Ende optisch aus */
+      margin-bottom: 30px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 0 auto 30px;
+    }
+    .divider span {
+      width: 64px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent));
+    }
+    .divider span:last-child {
+      background: linear-gradient(90deg, var(--accent), transparent);
+    }
+    .divider i {
+      width: 6px;
+      height: 6px;
+      transform: rotate(45deg);
+      border: 1px solid var(--accent);
+    }
+
+    p.lead {
+      font-size: clamp(13px, 3.6vw, 15px);
+      line-height: 2;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      max-width: 34em;
+      margin: 0 auto;
+    }
+
+    footer {
+      position: relative;
+      margin-top: 72px;
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      color: var(--muted);
+      opacity: 0.7;
+      animation: rise 1.2s .3s cubic-bezier(.2,.7,.2,1) both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      main, footer { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <svg class="crest" viewBox="0 0 80 96" aria-hidden="true">
+      <!-- Schild außen und innen -->
+      <path class="outer" d="M40 3 L75 13 V45 C75 67 60 83 40 93 C20 83 5 67 5 45 V13 Z"/>
+      <path class="inner" d="M40 9 L69 17.5 V45 C69 63.5 56.5 77 40 86 C23.5 77 11 63.5 11 45 V17.5 Z"/>
+      <!-- filigranes Richtschwert als Anspielung auf den Vollstrecker -->
+      <g class="sword">
+        <path d="M38.6 27 V72 L40 77 L41.4 72 V27"/>
+        <line x1="31" y1="27" x2="49" y2="27"/>
+        <line x1="40" y1="21" x2="40" y2="27"/>
+      </g>
+      <circle class="pommel" cx="40" cy="19.5" r="1.8"/>
+      <!-- das S als tragendes Element -->
+      <text x="40" y="65" text-anchor="middle">S</text>
+    </svg>
+    <div class="eyebrow">Familie</div>
+    <h1>Streck</h1>
+    <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+    <p class="lead">
+      Diese Domain wird privat genutzt.<br>
+      Kontakt ist per E-Mail möglich.
+    </p>
+  </main>
+
+  <footer>&copy; <span id="year">2026</span> Familie Streck</footer>
+
+  <script>
+    // Jahreszahl aktualisiert sich automatisch beim Aufruf der Seite
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
